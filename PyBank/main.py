@@ -31,6 +31,9 @@ with open(budgetdatacsv,newline='') as csvfile:
         months.append(row[0])
         profloss.append(int(row[1]))
 
+# Calculate the number of months
+nomonths = len(months)
+
 # Calculate the difference between this and last month's profit/loss 
 # Start with row 2 (index = 1), since the first row doesn't have a row to compare.
 for val in range(1,nomonths):
@@ -42,8 +45,6 @@ for val in range(1,nomonths):
 Now that we have all the lists, analyse the data in them to obtain
 the information for the report
 '''
-# Calculate the number of months
-nomonths = len(months)
 
 # Calculate the sum of profit/loss
 totalprofloss=sum(profloss)
